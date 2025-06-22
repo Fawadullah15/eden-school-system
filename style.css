@@ -1,0 +1,316 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* === Container Utility Class === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Header with Thumbnail Background === */
+header {
+  background-image: url('../images/thumbnail.jpg'); /* Your image file here */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 30px 0 20px;
+  position: relative;
+}
+
+.header-content {
+  background-color: rgba(0, 0, 0, 0.6); /* optional dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 20px;
+  gap: 20px;
+}
+
+
+.logo {
+  width: 80px;
+  margin-right: 20px;
+}
+
+.school-info h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.school-info .tagline {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* === Navigation === */
+.main-nav {
+  background-color: #002244;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.main-nav ul li {
+  margin: 0 15px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  color: #ffcc00;
+}
+
+/* === Hero Section === */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: white;
+  border-bottom: 2px solid #ddd;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* === Footer === */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+.footer-with-thumbnail {
+  background-image: url('../images/thumbnail.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+
+.footer-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.about-section {
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.about-section h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.about-section h3 {
+  margin-top: 30px;
+  color: #002244;
+}
+
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+}
+
+/* === Gallery Section === */
+.gallery-section {
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.gallery-section h2 {
+  color: #003366;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+/* === Contact Page Styling === */
+.contact-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #003366;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #002244;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #003366;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #002244;
+}
+.contact-numbers {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 30px 0;
+  font-size: 18px;
+  color: #003366;
+}
+
+.contact-numbers li {
+  margin-bottom: 8px;
+}
+
+.contact-numbers a {
+  text-decoration: none;
+  color: #003366;
+}
+
+.contact-numbers a:hover {
+  text-decoration: underline;
+}
+.signature {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  font-size: 13px;
+  color: #888;
+  z-index: 1000;
+  text-align: right;
+  line-height: 1.4;
+  opacity: 0.7;
+}
+
+.signature .name {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.signature a {
+  color: #888;
+  text-decoration: none;
+}
+
+.signature a:hover {
+  text-decoration: underline;
+}
